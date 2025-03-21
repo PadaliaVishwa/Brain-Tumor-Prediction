@@ -177,4 +177,9 @@ elif option == "🏥 Hospitals & Recognized Doctors":
         st.write(f"📞 Contact: {row['Contact']}")
         st.write(f"🔬 Speciality: {row['Speciality']}")
         st.write(f"💰 Free/Low-Cost Treatment: {row['Free_Treatment']}")
+        
+        # Add a clickable link to the hospital website
+        if pd.notna(row['Website']):  # Ensure the website column isn't empty
+            st.markdown(f"[🌐 Visit Website]({row['Website']})", unsafe_allow_html=True)
+
         st.write("---")
