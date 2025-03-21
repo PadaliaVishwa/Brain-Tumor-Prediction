@@ -9,6 +9,10 @@ from email.mime.multipart import MIMEMultipart
 import pandas as pd  
 from email.mime.base import MIMEBase
 from email import encoders
+import os
+
+port = int(os.environ.get("PORT", 8000))
+app.run(host="0.0.0.0", port=port, debug=True)
 
 # Set page configuration
 st.set_page_config(
