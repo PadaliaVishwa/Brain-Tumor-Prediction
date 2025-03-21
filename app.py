@@ -12,7 +12,7 @@ from email import encoders
 import os
 
 port = int(os.environ.get("PORT", 8000))
-app.run(host="0.0.0.0", port=port, debug=True)
+# app.run(host="0.0.0.0", port=port, debug=True)
 
 # Set page configuration
 st.set_page_config(
